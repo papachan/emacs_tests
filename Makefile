@@ -4,9 +4,7 @@ CASK ?= cask
 all: test
 
 test: clean
-	${MAKE} unit
 	${MAKE} compile
-	${MAKE} integration
 	${MAKE} unit
 	${MAKE} clean
 
