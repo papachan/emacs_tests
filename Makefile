@@ -9,12 +9,10 @@ test: clean
 	${MAKE} clean
 
 unit:
-	${CASK} exec ert-runner init
+	${CASK} exec ert-runner 
 
 compile:
 	${CASK} exec ${EMACS} -Q -batch -f batch-byte-compile emacs-tests.el
 
 clean:
-	rm -f emacs-tests.elc
-
-.PHONY:	all test integration unit
+	rm -f *.elc
